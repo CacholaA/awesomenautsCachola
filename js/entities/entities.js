@@ -205,7 +205,7 @@ game.EnemyCreep = me.Entity.extend({
         }]);
         this.health = 10;
         this.alwaysUpdate = true;
-        
+        this.now = new Date().getTime();
         this.body.setVelocity(3, 20);
         
         this.type = "EnemyCreep";
@@ -216,7 +216,10 @@ game.EnemyCreep = me.Entity.extend({
     },
     
     update: function(delta){
+        this.now = new Date().getTime();
+        
          this.body.vel.x -= this.body.accel.x * me.timer.tick;
+        me.collision.check(this,true,this.collideHandler.bind(this),true);
         this.body.update(delta);
         
         this._super(me.Entity, "update", [delta]);
@@ -224,6 +227,18 @@ game.EnemyCreep = me.Entity.extend({
      
         
         return true;
+    },
+    collideHandler:function(response){
+        if(response.b.type==='PlayerBase'){
+            this.attacking=true;
+            this.lastAttacking=this.now;
+            this.body.vel.x=0;
+            this.pos.x= this.pos.x + 1;
+            if((this.now-this.lastHit>=1000)){
+                this.lastHit=this.now;
+                response.b.loseHealth(1);
+            }
+        }
     }
 });
 
