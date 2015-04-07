@@ -9,6 +9,7 @@ game.resources = [
         {name: "player", type:"image", src: "data/img/custom2"},
         {name: "tower", type:"image", src: "data/img/tower_round.svg.png"},
         {name: "creep1", type:"image", src: "data/img/brainmonster.png"},
+        
         {name: "title-screen", type:"image", src: "data/img/title.png"},
         {name: "galaxy-wallpapers-20", type:"image", src: "data/img/galaxy-wallpapers-20.jpg"},
         {name: "lava", type:"image", src: "data/img/lava.jpg"},
