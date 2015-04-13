@@ -1,4 +1,3 @@
-
 game.EnemyBaseEntity = me.Entity.extend({
     init: function(x, y, setting) {
         this._super(me.Entity, "init", [x, y, {
@@ -27,6 +26,7 @@ game.EnemyBaseEntity = me.Entity.extend({
     update: function(delta) {
         if (this.health <= 0) {
             this.broken = true;
+            game.data.win = true;
             this.renderable.setCurrentAnimation("broken");
         }
         this.body.update(delta);
