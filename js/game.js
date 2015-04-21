@@ -1,31 +1,43 @@
+/* Game namespace */
 var game = {
 
 	// an object where to store game information
 	data : {
 		// score
 		score : 0,
-                enemyBaseHealth : 10,
-                playerBaseHealth : 10,
-                enemyCreepHealth : 5,
-                playerHealth : 10,
-                enemyCreepAttack : 1,
-                playerAttack : 1,
-                playerAttackTimer : 1000,
-                creepAttackTimer : 1000,
-                playerMoveSpeed : 5,
-                creepMoveSpeed : 5,
-                gameTimerManager : "",
-                heroDeathManager : "",
-                player :"",
-                exp :  0 ,
-                gold :  0,
-                exp1 :  0 ,
-                exp2 :  0 ,
-                exp3 :  0 ,
-                exp4 :  0,
-                win: ""
-                
-                
+                enemyBaseHealth: 20,
+                playerBaseHealth: 20 ,
+                enemyCreepHealth: 3,
+                playerHealth: 10,
+                enemyCreepAttack: 1,
+                playerAttack: 1,
+//                orcBaseDamage: 10,
+//                orcBaseHealth: 100,
+//                orcBaseSpeed: 3,
+//                orcBaseDefense: 0,
+                playerAttackTimer: 1000,
+                enemyCreepAttackTimer: 1000,
+                playerMoveSpeed: 5,
+                creepMoveSpeed: 5,
+                gameTimerManager: "",
+                heroDeathManager: "",
+                player: "",
+                exp: 0,
+                gold: 0,
+                ability1: 0,
+                ability2: 0,
+                ability3: 0,
+                skill1: 0,
+                skill2: 0,
+                skill3: 0,
+                exp1: 0,
+                exp2: 0,
+                exp3: 0,
+                exp4: 0,
+                win: "",
+                pausePos: "",
+                buyscreen: "",
+                buytext: ""
 	},
 	
 	
@@ -43,10 +55,13 @@ var game = {
 			me.plugin.register.defer(this, debugPanel, "debug");
 		});
 	}
-
+        
         me.save.add({exp: 0, exp1: 0, exp2: 0, exp3: 0, exp4: 0});
         
         me.state.SPENDEXP = 112;
+        
+        console.log(game.data.exp);
+        console.log(game.data.exp2);
 
 	// Initialize the audio.
 	me.audio.init("mp3,ogg");
@@ -63,18 +78,20 @@ var game = {
 
 	// Run on game resources loaded.
 	"loaded" : function () {
-            
                 me.pool.register("player", game.PlayerEntity, true);
                 me.pool.register("PlayerBase", game.PlayerBaseEntity);
                 me.pool.register("EnemyBase", game.EnemyBaseEntity);
                 me.pool.register("EnemyCreep", game.EnemyCreep, true);
                 me.pool.register("GameTimerManager", game.GameTimerManager);
                 me.pool.register("HeroDeathManager", game.HeroDeathManager);
-                me.pool.register("ExperianceManager", game.ExperianceManager);
-            
+                me.pool.register("ExperienceManager", game.ExperienceManager);
+                me.pool.register("SpendGold", game.SpendGold);
+                
+                
 		me.state.set(me.state.MENU, new game.TitleScreen());
 		me.state.set(me.state.PLAY, new game.PlayScreen());
                 me.state.set(me.state.SPENDEXP, new game.SpendExp());
+                
 
 		// Start the game.
 		me.state.change(me.state.MENU);

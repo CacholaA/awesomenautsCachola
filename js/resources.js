@@ -10,10 +10,10 @@ game.resources = [
         {name: "meta-tiles", type:"image", src: "data/img/meta-tiles.png"},
         {name: "player", type:"image", src: "data/img/custom2"},
         {name: "tower", type:"image", src: "data/img/tower_round.svg.png"},
-       
         {name: "creep1", type:"image", src: "data/img/brainmonster.png"},
         {name: "lava-screen", type:"image", src: "data/img/lava.png"},
-        {name: "exp-screen", type:"image", src: "data/img/loadpic.png"},
+        {name: "exp-screen", type:"image", src: "data/img/char_select.png"},
+        {name: "gold-screen", type:"image", src: "data/img/spend.png"},
 
 	/* Atlases 
 	 * @example
