@@ -7,8 +7,8 @@ game.resources = [
         
         {name: "background-tiles", type:"image", src: "data/img/background-tiles.png"},
         {name: "meta-tiles", type:"image", src: "data/img/meta-tiles.png"},
-        {name: "background", type:"image", src: "data/img/background.png"},
-        {name: "player", type:"image", src: "data/img/orcSpear.png"},
+          {name: "lava-screen", type:"image", src: "data/img/lava.png"},
+        {name: "player", type:"image", src: "data/img/custom2"},
         {name: "tower", type:"image", src: "data/img/tower_round.svg.png"},
         {name: "creep1", type:"image", src: "data/img/brainmonster.png"},
         {name: "title-screen", type:"image", src: "data/img/title.png"},

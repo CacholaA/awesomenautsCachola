@@ -1,12 +1,10 @@
-<!--Below is the starting tag you need to begin writing php code it is not
-closed like it is in my index.php page-->
 <?php
 require_once(__DIR__ . "/database.php");
 session_start();
 //The code below regenerates a session with a new id and delete the old session
 session_regenerate_id(true);
 //Below is the code that stores the path to my project
-$path = "CacholaAawesomenauts/php/";
+    $path = "CacholaAa);wesomenauts/php/";
       
 //Below is code that says everything on the right will be stored in the right 
 //variable which is my local host which is my main host
