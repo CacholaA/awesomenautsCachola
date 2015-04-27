@@ -16,7 +16,7 @@ game.resources = [
         {name: "exp-screen", type:"image", src: "data/img/char_select.png"},
         {name: "gold-screen", type:"image", src: "data/img/spend.png"},
         {name: "load-screen", type:"image", src: "data/img/char_select.png"},
-        
+        {name: "background", type:"image", src: "data/img/title.png"},
 	/* Atlases 
 	 * @example
 	 * {name: "example_tps", type: "tps", src: "data/img/example_tps.json"},

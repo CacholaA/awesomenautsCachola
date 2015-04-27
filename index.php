@@ -10,6 +10,7 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+                <link type="text/css" rel="stylesheet" href="index.css">
         <link rel="apple-touch-icon" href="icons/touch-icon-iphone-60x60.png">
         <link rel="apple-touch-icon" sizes="76x76" href="icons/touch-icon-ipad-76x76.png">
         <link rel="apple-touch-icon" sizes="120x120" href="icons/touch-icon-iphone-retina-120x120.png">
@@ -49,7 +50,7 @@
 		<!-- Game Scripts -->
 		<script type="text/javascript" src="js/game.js"></script>
 		<script type="text/javascript" src="js/resources.js"></script>
-
+                <script type="text/javascript" src="js/entities/EnemyCreep.js"></script>
 		<script type="text/javascript" src="js/entities/entities.js"></script>
                 <script type="text/javascript" src="js/entities/EnemyBaseEntity.js"></script>
                 <script type="text/javascript" src="js/entities/PlayerBaseEntity.js"></script>

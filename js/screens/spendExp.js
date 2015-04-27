@@ -3,7 +3,7 @@
 game.SpendExp = me.ScreenObject.extend({
 	onResetEvent: function() {	
 		me.game.world.addChild(new me.Sprite(0, 0, me.loader.getImage('background')), -10); // TODO
-                
+                console.log("Spend");
                 me.input.bindKey(me.input.KEY.F1, "F1");
                 me.input.bindKey(me.input.KEY.F2, "F2");
                 me.input.bindKey(me.input.KEY.F3, "F3");
