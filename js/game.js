@@ -5,6 +5,8 @@ var game = {
 	data : {
 		// score
 		score : 0,
+                option1:"",
+                option2:"",
                 enemyBaseHealth: 10,
                 playerBaseHealth: 10 ,
                 enemyCreepHealth: 3,
@@ -19,6 +21,7 @@ var game = {
                 enemyCreepAttackTimer: 1000,
                 playerMoveSpeed: 5,
                 creepMoveSpeed: 5,
+                spearTimer: 15,
                 gameTimerManager: "",
                 heroDeathManager: "",
                 player: "",
@@ -86,6 +89,7 @@ var game = {
                 me.pool.register("HeroDeathManager", game.HeroDeathManager);
                 me.pool.register("ExperienceManager", game.ExperienceManager);
                 me.pool.register("SpendGold", game.SpendGold);
+                me.pool.register("spear", game.SpearThrow);
                 
                 
 		me.state.set(me.state.MENU, new game.TitleScreen());
