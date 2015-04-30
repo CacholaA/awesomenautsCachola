@@ -12,14 +12,14 @@ game.SpearThrow = me.Entity.extend({
             }]);
        
         this.alwaysUpdate = true;
-       this.attack = this.game.data.ability3*3;
+       this.attack = game.data.ability3*3;
 
         this.body.setVelocity(8, 0);
 
         this.type = "spear";
         this.facing = facing
 
-            }},
+            },
     update: function(delta){
       if(this.facing === "left"){
         this.body.vel.x -= this.body.accel.x * me.timer.tick;
@@ -38,7 +38,7 @@ game.SpearThrow = me.Entity.extend({
        
           if (response.b.type === "EnemyCreep"||response.b.type==="EnemyBase") {
             response.b.loseHealth(this.attack);
-            this.game.world.removeChild(this);
+            me.game.world.removeChild(this);
         }
     }
 });

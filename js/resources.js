@@ -1,9 +1,10 @@
 game.resources = [
-
+//this is where you put all image files 
 	/* Graphics. 
 	 * @example
 	 * {name: "example", type:"image", src: "data/img/example.png"},
 	 */
+        //all the images that were in my map or charcters
         {name: "spaceship1", type:"image", src: "data/img/spaceship1.png"},
         {name: "galaxy2", type:"image", src: "data/img/galaxy2_1.jpg"},
         {name: "background-tiles", type:"image", src: "data/img/background-tiles.png"},
@@ -15,6 +16,7 @@ game.resources = [
         {name: "spear", type:"image", src: "data/img/spear.png"},
         {name: "title-screen", type:"image", src: "data/img/title.png"},
         {name: "galaxy-wallpapers-20", type:"image", src: "data/img/galaxy-wallpapers-20.jpg"},
+      
         {name: "exp-screen", type:"image", src: "data/img/char_select.png"},
         {name: "gold-screen", type:"image", src: "data/img/spend.png"},
         {name: "load-screen", type:"image", src: "data/img/char_select.png"},
@@ -29,7 +31,7 @@ game.resources = [
 	 * {name: "example01", type: "tmx", src: "data/map/example01.tmx"},
 	 * {name: "example01", type: "tmx", src: "data/map/example01.json"},
  	 */
-
+//map file
          {name: "level01", type: "tmx", src: "data/map/testmap.tmx"},
         
          

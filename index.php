@@ -22,6 +22,7 @@
 	<body>
 		<!-- Canvas placeholder -->
 		<div id="screen"></div>
+                <!-- the codes for login appear-->
                 
                 <form id="input" method="post">
                     <div class="field">
@@ -48,6 +49,8 @@
 		<script type="text/javascript" src="lib/plugins/debugPanel.js"></script>
 		
 		<!-- Game Scripts -->
+                <!--where you call all your files -->
+                
 		<script type="text/javascript" src="js/game.js"></script>
 		<script type="text/javascript" src="js/resources.js"></script>
                 <script type="text/javascript" src="js/entities/EnemyCreep.js"></script>
