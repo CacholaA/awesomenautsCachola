@@ -4,13 +4,15 @@ game.resources = [
 	 * @example
 	 * {name: "example", type:"image", src: "data/img/example.png"},
 	 */
-        
+        {name: "spaceship1", type:"image", src: "data/img/spaceship1.png"},
+        {name: "galaxy2", type:"image", src: "data/img/galaxy2_1.jpg"},
         {name: "background-tiles", type:"image", src: "data/img/background-tiles.png"},
         {name: "meta-tiles", type:"image", src: "data/img/meta-tiles.png"},
-          {name: "lava-screen", type:"image", src: "data/img/lava.png"},
+          {name: "lava-screen", type:"image", src: "data/img/galaxy-title.png"},
         {name: "player", type:"image", src: "data/img/custom2"},
         {name: "tower", type:"image", src: "data/img/tower_round.svg.png"},
         {name: "creep1", type:"image", src: "data/img/brainmonster.png"},
+        
         {name: "title-screen", type:"image", src: "data/img/title.png"},
       {name: "galaxy-wallpapers-20", type:"image", src: "data/img/galaxy-wallpapers-20.jpg"},
         {name: "exp-screen", type:"image", src: "data/img/char_select.png"},
