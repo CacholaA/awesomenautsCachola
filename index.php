@@ -22,7 +22,7 @@
 	<body>
 		<!-- Canvas placeholder -->
 		<div id="screen"></div>
-                <!-- the codes for login appear-->
+                <!-- the codes for login -->
                 
                 <form id="input" method="post">
                     <div class="field">
