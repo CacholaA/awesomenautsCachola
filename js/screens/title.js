@@ -1,15 +1,18 @@
 
 game.TitleScreen = me.ScreenObject.extend({
 	onResetEvent: function() {	
+            //loads title sreen
 		me.game.world.addChild(new me.Sprite(0, 0, me.loader.getImage('lava-screen')), -10); // TODO
                 game.data.option1 = new (me.Renderable.extend({
                     init: function(){
+                        //this code allows me to move the text/color
                         this._super(me.Renderable, 'init', [270, 300, 300, 50]);
                         this.font = new me.Font("Arial", 46, "black");
                         me.input.registerPointerEvent('pointerdown', this, this.newGame.bind(this), true);
                     },
                     
                     draw: function(render){
+                        //new game option
                         this.font.draw(render.getContext(), "START A NEW GAME", this.pos.x, this.pos.y);  
                     },
                     
@@ -18,6 +21,7 @@ game.TitleScreen = me.ScreenObject.extend({
                     },
                     
                     newGame: function(){
+                        //exp options
                         
                         me.input.releasePointerEvent('pointerdown', this);
                         me.input.releasePointerEvent('pointerdown',game.data.option2);
@@ -34,7 +38,7 @@ game.TitleScreen = me.ScreenObject.extend({
             
             
                     me.game.world.addChild(game.data.option1);
-                             
+                             //continue code and text ajustment
                     game.data.option2 = new (me.Renderable.extend({
                     init: function(){
                         this._super(me.Renderable, 'init', [380, 400, 250, 50]);

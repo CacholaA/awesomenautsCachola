@@ -1,5 +1,6 @@
 game.EnemyCreep = me.Entity.extend({
     init: function(x, y, settings) {
+        //spawns enemy and determines size
         this._super(me.Entity, "init", [x, y, {
                 image: "creep1",
                 width: 32,
@@ -25,6 +26,7 @@ game.EnemyCreep = me.Entity.extend({
         this.renderable.setCurrentAnimation("walk");
 
     },
+    //function that allows both enamy and player to lose health
     loseHealth: function(damage) {
         this.health = this.health - damage;
     },

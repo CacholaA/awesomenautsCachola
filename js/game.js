@@ -1,6 +1,6 @@
 /* Game namespace */
 var game = {
-
+//these codes determines health ,speed, attack damage, and gold
 	// an object where to store game information
 	data : {
 		// score
@@ -21,7 +21,7 @@ var game = {
                 enemyCreepAttackTimer: 1000,
                 playerMoveSpeed: 5,
                 creepMoveSpeed: 5,
-                spearTimer: 5,
+                spearTimer: 2,
                 gameTimerManager: "",
                 heroDeathManager: "",
                 player: "",

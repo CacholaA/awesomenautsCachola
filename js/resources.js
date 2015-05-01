@@ -6,6 +6,7 @@ game.resources = [
 	 */
         //all the images that were in my map or charcters
         {name: "spaceship1", type:"image", src: "data/img/spaceship1.png"},
+            {name: "spcewar2", type:"image", src: "data/img/spcewar2.jpg"},
         {name: "galaxy2", type:"image", src: "data/img/galaxy2_1.jpg"},
         {name: "background-tiles", type:"image", src: "data/img/background-tiles.png"},
         {name: "meta-tiles", type:"image", src: "data/img/meta-tiles.png"},

@@ -4,6 +4,7 @@ game.SpendExp = me.ScreenObject.extend({
 	onResetEvent: function() {	
 		me.game.world.addChild(new me.Sprite(0, 0, me.loader.getImage('background')), -10); // TODO
                 console.log("Spend");
+                //allows for keys to be assigned
                 me.input.bindKey(me.input.KEY.F1, "F1");
                 me.input.bindKey(me.input.KEY.F2, "F2");
                 me.input.bindKey(me.input.KEY.F3, "F3");
@@ -18,6 +19,8 @@ game.SpendExp = me.ScreenObject.extend({
                     },
                     
                     draw: function(render){
+                        //abillitys
+                        
                         this.font.draw(render.getContext(), "PRESS F1-F4 TO BUY, F5 TO SKIP", this.pos.x, this.pos.y);
                         this.font.draw(render.getContext(), "CURRENT EXP: " + game.data.exp.toString(), this.pos.x, this.pos.y + 50);
                         this.font.draw(render.getContext(), "F1: INCREASE GOLD PRODUCTION CURRENT LEVEL: " + game.data.exp1.toString() + " COST: " + exp1cost, this.pos.x, this.pos.y + 100);
@@ -34,6 +37,7 @@ game.SpendExp = me.ScreenObject.extend({
                            game.data.exp -= exp1cost;
                            me.state.change(me.state.PLAY);
                        }else{
+                           //tells user to gain more exp
                            console.log("not enough experience");
                        } 
                     }else if(action === "F2"){
@@ -50,6 +54,7 @@ game.SpendExp = me.ScreenObject.extend({
 	},
 	
 	onDestroyEvent: function() {
+            //ability choosement
                 me.input.unbindKey(me.input.KEY.F1, "F1");
                 me.input.unbindKey(me.input.KEY.F2, "F2");
                 me.input.unbindKey(me.input.KEY.F3, "F3");

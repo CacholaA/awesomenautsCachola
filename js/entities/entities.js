@@ -46,7 +46,7 @@ game.PlayerEntity = me.Entity.extend({
         this.facing = "right";
         this.dead = false;
     },
-    
+    //the code below is the animations for my character
     setAnimation: function(){
         this.renderable.addAnimation("idle", [143]);
         this.renderable.addAnimation("walk", [143, 144, 145, 146, 147,148,149, 151], 80);
@@ -63,7 +63,7 @@ game.PlayerEntity = me.Entity.extend({
         
         this.checkAbilityKeys();
 
-        
+        //thhe code below allows the animations to opperate 
         if (me.input.isKeyPressed("attack")) {
             if (!this.renderable.isCurrentAnimation("attack")) {
                 this.renderable.setCurrentAnimation("attack", "idle");
@@ -92,7 +92,7 @@ game.PlayerEntity = me.Entity.extend({
         }
         return false;
     },
-    
+    //the code below checks to see if the code works if you pressed the key
     checkKeyPressesAndMove: function(){
         if (me.input.isKeyPressed("right")) {
             this.moveRight();
@@ -107,24 +107,24 @@ game.PlayerEntity = me.Entity.extend({
         }
 
     },
-    
+    //this is the code that makes your player move right
     moveRight: function(){
         this.facing = "right";
         this.body.vel.x += this.body.accel.x * me.timer.tick;
         this.flipX(false);
     },
-    
+    //this is the code that makes your player move left 
     moveLeft: function(){
          this.facing = "left";
             this.flipX(true);
             this.body.vel.x -= this.body.accel.x * me.timer.tick;
     },
-    
+    //this the code that make your player jump
     jump: function(){
         this.body.jumping = true;
             this.body.vel.y -= this.body.accel.y * me.timer.tick;
     },
-    
+    //this code is for all your abilities
     checkAbilityKeys: function(){
       if(me.input.isKeyPressed("skill1")){
           //this.speedBoost();
@@ -134,6 +134,7 @@ game.PlayerEntity = me.Entity.extend({
          this.throwSpear();
       } 
     },
+    //this is the code that makes your player have the ability to throw a spear
     throwSpear: function(){
         if(this.now - this.lastSpear >= game.data.spearTimer * 1000 && game.data.ability3 > 0){ 
         this.lastSpear = this.now;
@@ -141,11 +142,12 @@ game.PlayerEntity = me.Entity.extend({
             me.game.world.addChild(spear, 10);
         }
     },
-    
+    //this code makes your character lose health when hit
     loseHealth: function(damage) {
         console.log(this.health);
         this.health = this.health - damage;
     },
+    //these are the codes for when your player collides with something
     collideHandler: function(response) {
         if (response.b.type === "EnemyBaseEntity") {
             var ydif = this.pos.y - response.b.pos.y;
@@ -165,7 +167,7 @@ game.PlayerEntity = me.Entity.extend({
                 //this.pos.x = this.pos.x + 1;
             }
 
-
+//this code is the code for colliding with an enemy by attacking
             if (this.renderable.isCurrentAnimation("attack") && this.now - this.lastHit >= game.data.playerAttackTimer) {
                 this.lastHit = this.now;
                 response.b.loseHealth(game.data.playerAttack);

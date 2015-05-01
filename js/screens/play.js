@@ -5,7 +5,7 @@ game.PlayScreen = me.ScreenObject.extend({
 	onResetEvent: function() {
 		// reset the score
 		game.data.score = 0;
-
+//this is the code that loads up your map
                 me.levelDirector.loadLevel("level01");
                 
                 this.resetPlayer(0, 420);
@@ -21,7 +21,7 @@ game.PlayScreen = me.ScreenObject.extend({
                 
                 var spendGold = me.pool.pull("SpendGold",0, 0, {});
                 me.game.world.addChild(spendGold, 0);
-                
+                //these are the code that are assigns keys for movements and buttons
                 me.input.bindKey(me.input.KEY.B, "buy");
                 me.input.bindKey(me.input.KEY.Q, "skill1");
                 me.input.bindKey(me.input.KEY.W, "skill2");
